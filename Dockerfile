@@ -12,6 +12,13 @@ COPY yarn.lock ./
 RUN yarn install --immutable --immutable-cache --check-cache
 
 COPY . .
+
+ARG API_URL="https://sabio.sudox.nl/api/v1/"
+ENV REACT_APP_API_ROOT=$API_URL
+
+ARG INCLUDE_API_ROOT="true"
+ENV REACT_APP_INCLUDE_API_ROOT=$INCLUDE_API_ROOT
+
 RUN yarn run build
 
 # ==================
