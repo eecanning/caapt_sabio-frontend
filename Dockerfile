@@ -13,7 +13,7 @@ RUN yarn install --immutable --immutable-cache --check-cache
 
 COPY . .
 
-ARG API_URL="https://sabio.sudox.nl/api/v1/"
+ARG API_URL="https://sabio.netwerkdigitaalerfgoed.nl/api/v1/"
 ENV REACT_APP_API_ROOT=$API_URL
 
 ARG INCLUDE_API_ROOT="true"
