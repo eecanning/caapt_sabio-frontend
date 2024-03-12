@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docker": "docker build -t sabio-frontend .; docker run -t -p 8080:8080 sabio-frontend"
+    "docker-build": "docker build -t sabio-frontend .", 
+    "docker-run": "docker run --network=caapt_network -p 8081:8080 sabio-frontend"
   },
   "eslintConfig": {
     "extends": [
